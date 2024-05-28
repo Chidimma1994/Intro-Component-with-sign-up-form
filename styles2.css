@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('./images/bg-intro-desktop.png') no-repeat center;
+    background-color: var(--red);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.container-text,
+.container-form {
+    flex: 1;
+}
+
+h1 {
+    color: white;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    color: white;
+    font-size: 1.05rem;
+    opacity: 90%;
+}
+
+h4 {
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 6px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5rem;
+}
+
+h4 span {
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.container-input {
+    margin-bottom: 5px;
+	position: relative;
+}
+
+.container-input label{
+    display: inline-block;
+}
+
+.container-input:focus {
+    outline: 0;
+}
+
+.container-input.error input {
+    border-color: #ff3860;
+}
+
+.container-input.icon-error input  {
+    visibility: visible;
+}
+
+
+.container-input .error {
+    color: #ff3860;
+    font-size: 12px;
+    height: 14px;
+    bottom: 0;
+    display: block;
+    text-align: right;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+  background: hsl(154, 80%, 61%);;
+}
+
+button:active{
+  background: hsl(154, 81%, 71%);;
+}
+
+small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grayish-blue);
+    gap: 0.25rem;
+    width: 100%;
+    font-size: 11px;
+}
+
+small span {
+    color: var(--red);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.container-input input {
+    display: block;
+    padding: 16px;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 2px solid var(--grayish-blue);
+    margin-top: 0;
+}
+
+input:hover,
+input:focus {
+  outline: 1.5px solid var(--blue);
+}
+
+
+.icon-error, .icon-error-one, .icon-error-two, .icon-error-three {
+    visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 16px;
+}
+
+.visibility {
+    visibility:visible;
+	position: absolute;
+	top: 40px;
+	right: 16px;
+    width: 5%;
+    color: grey;
+    cursor: pointer;
+}
+
+.visibility-off {
+    visibility:hidden;
+	position: absolute;
+	top: 40px;
+	right: 16px;
+    width: 5%;
+    color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+       flex-direction: column;
+       gap: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      
+    }
+    
+    p {
+       text-align: center;
+       
+    }
+
+    small {
+        font-size: 6px;
+    }
+    
+    small span {
+        font-weight: 600;
+        font-size: 8px;
+    }
+
+    .visibility {
+        width: 9%;
+    }
+
+    .container-input {
+        margin-bottom: 2px;
+    }
+
+}
+
+
+
